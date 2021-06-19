@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory Homepage</title>
+  <!--  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container text-center">
+
+  <div><h1>Ipoteka List</h1></div>
+
+  <form action="#"  th:action="@{/show-result}" th:object="${customer}" method="post"  >
+
+
+    <input type="text" th:field="*{firstName}"
+           placeholder="first name" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{lastName}"
+           placeholder="last name " class="form-control mb-4 col-4">
+
+    <input type="date" th:field="*{birthDate}"
+           placeholder="dogum tarixi" class="form-control mb-4 col-4">
+
+    <input type="number" th:field="*{homePrice}"
+           placeholder="home price" class="form-control mb-4 col-4">
+
+    <input type="number" th:field="*{months}"
+           placeholder="time" class="form-control mb-4 col-4">
+
+
+    <button type="submit" class="btn btn-info col-2"> Show </button>
+  </form>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+

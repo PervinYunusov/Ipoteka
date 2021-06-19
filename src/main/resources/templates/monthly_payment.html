@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Homepage</title>
+    <!--  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container ">
+
+
+
+
+
+    <div>
+        <div>
+
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Month Number</th>
+                <th>   Date    </th>
+                <th> Month Amount</th>
+                <th>percentMonthAmount</th>
+                <th>noPercentMonthAmount</th>
+                <th>basicAmount</th>
+                <th>totalAmount</th>
+                <th>initialPayment</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th:each="product : ${baseResponse}">
+                <tr>
+
+                    <td th:text="${product.monthNumber}"></td>
+                    <td th:text="${product.date}"></td>
+                    <td th:text="${product.monthAmount}"></td>
+                    <td th:text="${product.percentMonthAmount}"></td>
+                    <td th:text="${product.noPercentMonthAmount}"></td>
+                    <td th:text="${product.basicAmount}"></td>
+                    <td th:text="${product.totalAmount}"></td>
+                    <td th:text="${product.initialPayment}"></td>
+
+
+                </tr>
+
+            </th:block>
+
+            </tbody>
+
+
+        </table>
+
+
+<!--        <th:block th:if="${#lists.isEmpty(baseResponse)}">List of employees is empty</th:block>-->
+
+<!--        <h1>List of Employees (number of employees: <th:block th:text="${#lists.size(baseResponse)}"></th:block>)</h1>-->
+<!--        <table class="table table-bordered">-->
+<!--            <thead class="thead-dark">-->
+<!--            <tr>-->
+<!--                            <th>Month Number</th>-->
+<!--                                <th>Date</th>-->
+<!--                                <th> Month Amount</th>-->
+<!--                                <th>percentMonthAmount</th>-->
+<!--                                <th>noPercentMonthAmount</th>-->
+<!--                                <th>basicAmount</th>-->
+<!--                                <th>totalAmount</th>-->
+<!--                                <th>initialPayment</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="product : ${baseResponse}">-->
+
+
+<!--                                    <td th:text="${product.monthNumber}"></td>-->
+<!--&lt;!&ndash;                                    <td th:text="${#dates.format(product.date,'dd-MM-yyyy')}"></td>&ndash;&gt;-->
+<!--                                    <td th:text="${product.monthAmount}"></td>-->
+<!--                                    <td th:text="${product.percentMonthAmount}"></td>-->
+<!--                                    <td th:text="${product.noPercentMonthAmount}"></td>-->
+<!--                                    <td th:text="${product.basicAmount}"></td>-->
+<!--                                    <td th:text="${product.totalAmount}"></td>-->
+<!--                                    <td th:text="${product.initialPayment}"></td>-->
+
+
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+
+
+
+
+
+</div>
+</div>
+
+</div>
+</body>
+</html>
